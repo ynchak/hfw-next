@@ -9,7 +9,7 @@ const Option = ({ defaultValue, values, changeRadioValue }) => {
       onChange={changeRadioValue}
     >
       {values.map(({ type, value }) => (
-        <Radio key={type} value={value}>
+        <Radio key={type} value={type}>
           {value}
         </Radio>
       ))}
