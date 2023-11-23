@@ -1,2 +1,3 @@
 import openSourcesWithGoodsConfig from "./openSourcesWithGoodsConfig";
-export { openSourcesWithGoodsConfig };
+import transformConfig from "./transformConfig";
+export { openSourcesWithGoodsConfig, transformConfig };

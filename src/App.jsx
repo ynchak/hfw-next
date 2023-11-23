@@ -1,10 +1,12 @@
 import FormAction from "./components/FormAction";
-import { openSourcesWithGoodsConfig } from "./formConfigs";
+import { openSourcesWithGoodsConfig, transformConfig } from "./formConfigs";
 const transferGoods = openSourcesWithGoodsConfig;
+const transfor = transformConfig;
 const App = () => {
   return (
     <>
       <FormAction {...transferGoods} />
+      <FormAction {...transfor} />
     </>
   );
 };
