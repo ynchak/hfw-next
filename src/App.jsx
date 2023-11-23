@@ -1,5 +1,6 @@
 import FormAction from "./components/FormAction";
 import {
+  makeLinks,
   openInConstruct,
   openSourcesWithGoodsConfig,
   splitColumn,
@@ -13,6 +14,7 @@ const App = () => {
       <FormAction {...transformConfig} />
       <FormAction {...openInConstruct} />
       <FormAction {...splitColumn} />
+      <FormAction {...makeLinks} />
     </>
   );
 };
