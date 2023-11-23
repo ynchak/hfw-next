@@ -11,24 +11,44 @@ const FormAction = ({
   placeholder,
   radioGroup,
 }) => {
+  const [countLines, setCountLines] = useState("");
   const [radioValue, setRadioValue] = useState();
+  const [data, setData] = useState("");
+  const [error, setError] = useState(null);
   const changeRadioValue = (e) => {
     setRadioValue(e.target.value);
   };
+  const handleOnChangeTextrea = (e) => {
+    setData(e.target.value);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    action("", radioValue);
+    try {
+      setCountLines(action(data, radioValue));
+    } catch (e) {
+      setError(e);
+    }
+    setData("");
   };
   return (
     <Card>
       <CardBody>
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <Textarea maxRows={4} minRows={4} placeholder={placeholder} />
+          <Textarea
+            maxRows={4}
+            minRows={4}
+            placeholder={placeholder}
+            onChange={handleOnChangeTextrea}
+            value={data}
+          />
           <div className="flex justify-between mt-2">
             {radioGroup ? (
               <Option {...radioGroup} changeRadioValue={changeRadioValue} />
             ) : (
-              <div></div>
+              <div>
+                <p>{countLines} </p>
+                <p className="text-orange-600">{error}</p>
+              </div>
             )}
             <Button endContent={buttonIcon} color={buttonColor} type="submit">
               {buttonTitle}
