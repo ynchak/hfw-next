@@ -1,7 +1,20 @@
 import PropTypes from "prop-types";
 import { Button, Card, CardBody, Textarea } from "@nextui-org/react";
+import {
+  BorderSplitIcon,
+  Link1Icon,
+  OpenInNewWindowIcon,
+  TransformIcon,
+} from "@radix-ui/react-icons";
 import Option from "./Option";
 import { useState } from "react";
+
+const icon = {
+  open: <OpenInNewWindowIcon />,
+  transform: <TransformIcon />,
+  link: <Link1Icon />,
+  split: <BorderSplitIcon />,
+};
 
 const FormAction = ({
   action,
@@ -50,7 +63,11 @@ const FormAction = ({
                 <p className="text-orange-600">{error}</p>
               </div>
             )}
-            <Button endContent={buttonIcon} color={buttonColor} type="submit">
+            <Button
+              endContent={icon[buttonIcon]}
+              color={buttonColor}
+              type="submit"
+            >
               {buttonTitle}
             </Button>
           </div>

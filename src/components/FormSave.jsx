@@ -8,6 +8,7 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import useSaveFormStore from "../store";
+import { LockClosedIcon, ResetIcon } from "@radix-ui/react-icons";
 
 const settingsData = {
   category: "ID категорії",
@@ -89,14 +90,18 @@ const FormSave = () => {
               </div>
               <div className="flex justify-between mt-2">
                 <Button
-                  endContent=""
+                  endContent={<ResetIcon />}
                   color="primary"
                   type="reset"
                   variant="faded"
                 >
                   Очистити значення
                 </Button>
-                <Button endContent="" color="success" type="submit">
+                <Button
+                  endContent={<LockClosedIcon />}
+                  color="success"
+                  type="submit"
+                >
                   Зберегти
                 </Button>
               </div>
