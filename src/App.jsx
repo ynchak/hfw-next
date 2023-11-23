@@ -7,6 +7,7 @@ import {
   splitColumn,
   transformConfig,
 } from "./formConfigs";
+import FormSave from "./components/FormSave";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
               Оновлення товарів
             </h1>
             <Divider className="mt-2" />
+            <FormAction {...makeLinks} />
+            <FormSave />
             <FormAction {...makeLinks} />
           </div>
         </div>
