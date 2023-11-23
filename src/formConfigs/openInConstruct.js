@@ -1,3 +1,5 @@
+import { openInNewTab } from "../utils";
+
 const addres = `https://gomer.rozetka.company/gomer/smart-folders/next-page?searchParams[0][field]=goods_id&searchParams[0][condition]=%3D&searchParams[0][value]=`;
 
 const params = {
@@ -13,15 +15,15 @@ const spliceIntoChunks = (arr, chunkSize) => {
   return res;
 };
 
-const action = (column, status) => {
+const action = (column, type) => {
   const lines = column.split("\n");
   const links = [];
   const chunks = spliceIntoChunks(lines, 500);
   for (const chunk of chunks) {
     if (chunk == "") continue;
-    links.push(`${addres}${chunk.join("+")}${params[status]}`);
+    links.push(`${addres}${chunk.join("+")}${params[type]}`);
   }
-  console.log(links);
+  openInNewTab(links);
 };
 
 export default {

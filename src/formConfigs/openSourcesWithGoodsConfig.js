@@ -1,3 +1,4 @@
+import { openInNewTab } from "../utils";
 const url = "https://gomer.rozetka.company/gomer/items/source/";
 const attr = "?ItemSearch[id]=";
 const maxGoods = 50;
@@ -31,7 +32,7 @@ const action = (data) => {
     const [source, goodsId] = line.split("\t");
     links.push(...createLink(source, goodsId.split(", ")));
   }
-  console.log(...links);
+  openInNewTab(links.flat());
 };
 export default {
   buttonColor: "primary",
@@ -40,13 +41,5 @@ export default {
   placeholder:
     "Встав з excel стовпчики з source і Id's товарів\nТакого виду: 31967\t366784065, 366784659, ... ",
   radioGroup: null,
-  //{
-  //   defaultValue: "500",
-  //   values: [
-  //     { type: "50", value: "50" },
-  //     { type: "150", value: "150" },
-  //     { type: "500", value: "500" },
-  //   ],
-  // },
   action,
 };

@@ -1,3 +1,5 @@
+import { addToClipboard } from "../utils";
+
 const url = "https://rozetka.com.ua/ua/";
 const action = (column) => {
   const lines = column.split("\n");
@@ -6,7 +8,7 @@ const action = (column) => {
     if (line === "") continue;
     links.push(`${url}${line}/p${line}/`);
   }
-  console.log(links.join("\n"));
+  addToClipboard(links.join("\n"));
   return links.length;
 };
 

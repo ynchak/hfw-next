@@ -25,15 +25,7 @@ export default {
   buttonIcon: "transform",
   buttonTitle: "Трансформувати",
   placeholder:
-    "Встав з excel стовпчики з Id товару і source\nТакого виду: 31967\t366784065\n... ",
+    "Встав з excel стовпчики з Id товару і source\nТакого виду: 366784065\t31967\n... ",
   radioGroup: null,
-  //{
-  //   defaultValue: "500",
-  //   values: [
-  //     { type: "50", value: "50" },
-  //     { type: "150", value: "150" },
-  //     { type: "500", value: "500" },
-  //   ],
-  // },
   action,
 };

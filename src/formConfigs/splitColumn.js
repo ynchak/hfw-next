@@ -1,3 +1,5 @@
+import { addToClipboard } from "../utils";
+
 const action = (column, rows) => {
   const lines = column.split("\n");
   const countColumns = Math.ceil(lines.length / rows);
@@ -9,7 +11,7 @@ const action = (column, rows) => {
       columns[j] = `${columns[j]}\t${peice[j]}`;
     }
   }
-  console.log(columns.join("\n"));
+  addToClipboard(columns.join("\n"));
 };
 export default {
   buttonColor: "secondary",

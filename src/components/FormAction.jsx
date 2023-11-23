@@ -31,7 +31,7 @@ const FormAction = ({
     setData("");
   };
   return (
-    <Card>
+    <Card className="mt-4">
       <CardBody>
         <form autoComplete="off" onSubmit={handleSubmit}>
           <Textarea
