@@ -7,6 +7,7 @@ import {
   SelectItem,
 } from "@nextui-org/react";
 import { useState } from "react";
+import useSaveFormStore from "../store";
 
 const settingsData = {
   category: "ID категорії",
@@ -15,8 +16,9 @@ const settingsData = {
 };
 
 const FormSave = () => {
-  const [selectValue, setSelectValue] = useState("");
-  const [settingsInputValue, setSettingsInputValue] = useState("");
+  const { variant, value, paramValue, setData } = useSaveFormStore();
+  const [selectValue, setSelectValue] = useState(variant || "");
+  const [settingsInputValue, setSettingsInputValue] = useState(value || "");
   const [settingsInputParamValue, setSettingsInputParamValue] = useState("");
 
   const handlerSelect = (e) => {
@@ -31,12 +33,25 @@ const FormSave = () => {
   };
   const handlerSubmit = (e) => {
     e.preventDefault();
+    if (selectValue !== "category") {
+      setSettingsInputParamValue("");
+    }
+    setData({
+      variant: selectValue,
+      value: settingsInputValue,
+      paramValue: settingsInputParamValue,
+    });
   };
   const handlerReset = (e) => {
     e.preventDefault();
     setSelectValue("");
     setSettingsInputValue("");
     setSettingsInputParamValue("");
+    setData({
+      variant: "",
+      value: "",
+      paramValue: "",
+    });
   };
   return (
     <Card className="mt-4">
@@ -61,13 +76,12 @@ const FormSave = () => {
             <>
               <div className="flex gap-2 mt-2">
                 <Input
-                  placeholder={`Введи ${settingsData[selectValue]}`}
+                  placeholder={value || `Введи ${settingsData[selectValue]}`}
                   onChange={handlerSettingsInput}
-                  value={settingsInputValue}
                 />
                 {selectValue === "category" && (
                   <Input
-                    placeholder={`Введи ID параметру`}
+                    placeholder={paramValue || `Введи ID параметру`}
                     onChange={handlerSettingsParamInput}
                     value={settingsInputParamValue}
                   />

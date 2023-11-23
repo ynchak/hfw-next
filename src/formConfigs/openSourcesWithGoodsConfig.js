@@ -23,7 +23,8 @@ const createLink = (source, goodsId) => {
 };
 const action = (data) => {
   const lines = data.split("\n");
-  if (lines.length >= maxLines) {
+  if (lines.length > maxLines + 1) {
+    // last line is empty
     throw `Введено більше ${maxLines} джерел`;
   }
   const links = [];

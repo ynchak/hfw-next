@@ -1,3 +1,5 @@
+import { addToClipboard } from "../utils";
+
 const toText = (store) => {
   const text = [];
   const entries = store.entries();
@@ -17,7 +19,7 @@ const action = (columns) => {
     store.set(source, [...list, id]);
   }
   const text = toText(store);
-  console.log(text);
+  addToClipboard(text);
 };
 
 export default {

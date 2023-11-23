@@ -3,6 +3,7 @@ import FormAction from "./components/FormAction";
 import {
   makeLinks,
   openInConstruct,
+  openSourcesAttr,
   openSourcesWithGoodsConfig,
   splitColumn,
   transformConfig,
@@ -29,7 +30,7 @@ const App = () => {
               Оновлення товарів
             </h1>
             <Divider className="mt-2" />
-            <FormAction {...makeLinks} />
+            <FormAction {...openSourcesAttr} />
             <FormSave />
             <FormAction {...makeLinks} />
           </div>

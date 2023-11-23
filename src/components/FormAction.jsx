@@ -12,7 +12,7 @@ const FormAction = ({
   radioGroup,
 }) => {
   const [countLines, setCountLines] = useState("");
-  const [radioValue, setRadioValue] = useState();
+  const [radioValue, setRadioValue] = useState(radioGroup?.defaultValue);
   const [data, setData] = useState("");
   const [error, setError] = useState(null);
   const changeRadioValue = (e) => {
