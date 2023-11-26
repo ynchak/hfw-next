@@ -9,10 +9,12 @@ import {
   transformConfig,
 } from "./formConfigs";
 import FormSave from "./components/FormSave";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <>
+      <Header />
       <div className="container mx-auto">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
           <div className="mt-2">
