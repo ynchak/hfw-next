@@ -28,7 +28,7 @@ const links = [
 
 const Header = () => {
   return (
-    <Navbar>
+    <Navbar isBordered>
       <NavbarBrand>
         <h2 className="font-bold text-inherit">HFW</h2>
       </NavbarBrand>
