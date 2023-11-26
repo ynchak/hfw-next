@@ -28,7 +28,7 @@ const ThemeSwitcher = () => {
   });
 
   const applyTheme = () => {
-    const selectedTheme = localStorage.getItem("theme");
+    const selectedTheme = localStorage.getItem("theme") || theme;
     if (selectedTheme === "system") {
       const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       document.documentElement.className = isDark ? "dark" : "light";
