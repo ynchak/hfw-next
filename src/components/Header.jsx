@@ -21,7 +21,7 @@ const links = [
     title: "Mail",
   },
   {
-    link: "https://sf.rozetka.company/available-folders/",
+    link: "https://sf.rozetka.company/my-folders?field=ID&direction=DESC",
     title: "SF",
   },
 ];
