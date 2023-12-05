@@ -1,9 +1,10 @@
-import openSourcesWithGoodsConfig from "./openSourcesWithGoodsConfig";
-import transformConfig from "./transformConfig";
-import openInConstruct from "./openInConstruct";
-import splitColumn from "./splitColumn";
-import makeLinks from "./makeLinks";
-import openSourcesAttr from "./openSourcesAttr";
+import openSourcesWithGoodsConfig from './openSourcesWithGoodsConfig';
+import transformConfig from './transformConfig';
+import openInConstruct from './openInConstruct';
+import splitColumn from './splitColumn';
+import makeLinks from './makeLinks';
+import openSourcesAttr from './openSourcesAttr';
+import checkIsCategoryClean from './checkIsCategoryClean';
 export {
   openSourcesWithGoodsConfig,
   openSourcesAttr,
@@ -11,4 +12,5 @@ export {
   openInConstruct,
   splitColumn,
   makeLinks,
+  checkIsCategoryClean,
 };

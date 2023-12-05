@@ -1,6 +1,7 @@
 import { Card, CardBody, Divider } from "@nextui-org/react";
 import FormAction from "./components/FormAction";
 import {
+  checkIsCategoryClean,
   makeLinks,
   openInConstruct,
   openSourcesAttr,
@@ -42,6 +43,7 @@ const App = () => {
             <Divider className="mt-2" />
             <FormAction {...openSourcesAttr} />
             <FormSave />
+            <FormAction {...checkIsCategoryClean} />
             <FormAction {...makeLinks} />
           </div>
         </div>
