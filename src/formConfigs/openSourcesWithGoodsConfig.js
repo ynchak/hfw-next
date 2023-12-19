@@ -2,7 +2,7 @@ import { openInNewTab } from "../utils";
 const url = "https://gomer.rozetka.company/gomer/items/source/";
 const attr = "?ItemSearch[id]=";
 const maxGoods = 50;
-const maxLines = 20;
+const maxLines = 30;
 
 const chunkGoods = (goods) => {
   const result = [];
