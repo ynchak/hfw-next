@@ -40,7 +40,7 @@ const action = (column, field) => {
     links.push();
   }
 
-  const link = `${addres}${lines.join(',')}${params}${value}${attr}`;
+  const link = `${addres}${lines.join(' ')}${params}${value}${attr}`;
   // console.log(link);
   openInNewTab([link]);
 };
