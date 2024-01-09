@@ -7,7 +7,7 @@ const type = {
       'https://gomer.rozetka.company/gomer/smart-folders/next-page?searchParams[1][field]=sync_source_id&searchParams[1][condition]=%3D&searchParams[1][value]=',
     params:
       '&searchParams[2][field]=category&searchParams[2][condition]=%3D&searchParams[2][value]=',
-    attr: '&pageCondition=all&page=0&pageSize=50&size=50',
+    attr: '&pageCondition=all&page=0&pageSize=50&size=500',
     maxLines: 50,
   },
   id: {
@@ -15,7 +15,7 @@ const type = {
       'https://gomer.rozetka.company/gomer/smart-folders/next-page?searchParams[id%3D1][field]=goods_id&searchParams[id%3D1][condition]=%3D&searchParams[id%3D1][value]=',
     params:
       '&searchParams[id%3D2][field]=category&searchParams[id%3D2][condition]=%3D&searchParams[id%3D2][value]=',
-    attr: '&pageCondition=all&page=0&pageSize=50&size=50',
+    attr: '&pageCondition=all&page=0&pageSize=50&size=500',
     maxLines: 500,
   },
 };
