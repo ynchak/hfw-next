@@ -14,7 +14,7 @@ const type = {
     addres:
       'https://gomer.rozetka.company/gomer/smart-folders/next-page?searchParams[id%3D1][field]=goods_id&searchParams[id%3D1][condition]=%3D&searchParams[id%3D1][value]=',
     params:
-      '&searchParams[id%3D2][field]=category&searchParams[id%3D2][condition]=%3D&searchParams[id%3D2][value]=',
+      '&searchParams[id%3D2][field]=category&searchParams[id%3D2][condition]=%21%3D&searchParams[id%3D2][value]=',
     attr: '&pageCondition=all&page=0&pageSize=50&size=500',
     maxLines: 500,
   },
