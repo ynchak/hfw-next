@@ -1,20 +1,20 @@
-import useSaveFormStore from "../store";
-import { openInNewTab } from "../utils";
+import useSaveFormStore from '../store';
+import { openInNewTab } from '../utils';
 
-const maxLines = 30;
+const maxLines = 40;
 
 const param = {
-  address: "https://gomer.rozetka.company/gomer/sellers/attributes/source/",
-  attributes: "?SyncSourceAttributeSearch[attribute_id_title]=",
+  address: 'https://gomer.rozetka.company/gomer/sellers/attributes/source/',
+  attributes: '?SyncSourceAttributeSearch[attribute_id_title]=',
 };
 const category = {
-  address: "https://gomer.rozetka.company/gomer/sellers/attributes/source/",
-  attributes: "?SyncSourceAttributeSearch[rz_category_id]=",
-  param: "&SyncSourceAttributeSearch[attribute_id_title]=",
+  address: 'https://gomer.rozetka.company/gomer/sellers/attributes/source/',
+  attributes: '?SyncSourceAttributeSearch[rz_category_id]=',
+  param: '&SyncSourceAttributeSearch[attribute_id_title]=',
 };
 const vendor = {
-  address: "https://gomer.rozetka.company/gomer/sellers/vendors/source/",
-  attributes: "?SyncSourceVendorSearch[producer_title]=",
+  address: 'https://gomer.rozetka.company/gomer/sellers/vendors/source/',
+  attributes: '?SyncSourceVendorSearch[producer_title]=',
 };
 const data = {
   param,
@@ -48,7 +48,7 @@ const action = (column) => {
   if (!variant) {
     throw `❌ Форма нижче 👇 не налаштована`;
   }
-  const lines = column.split("\n");
+  const lines = column.split('\n');
   if (lines.length > maxLines + 1) {
     // last line is empty
     throw `Введено більше ${maxLines} джерел`;
@@ -56,16 +56,16 @@ const action = (column) => {
   const type = new Type(variant, value);
   const links = [];
   for (const line of lines) {
-    if (line === "") continue;
+    if (line === '') continue;
     links.push(createLink(type, line, paramValue));
   }
   openInNewTab(links);
 };
 export default {
-  buttonColor: "primary",
-  buttonIcon: "open",
-  buttonTitle: "Відкрити джерела з товарами",
-  placeholder: "Встав з excel стовпчик з source\nТакого виду: 31967",
+  buttonColor: 'primary',
+  buttonIcon: 'open',
+  buttonTitle: 'Відкрити джерела з товарами',
+  placeholder: 'Встав з excel стовпчик з source\nТакого виду: 31967',
   radioGroup: null,
   action,
 };
