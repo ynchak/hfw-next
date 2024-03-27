@@ -24,6 +24,7 @@ export default {
       { type: "50", value: "50" },
       { type: "150", value: "150" },
       { type: "500", value: "500" },
+      { type: "10000", value: "10000" },
     ],
   },
   action,
